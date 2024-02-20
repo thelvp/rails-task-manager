@@ -19,13 +19,13 @@ Rails.application.routes.draw do
   get "tasks/:id", to: "tasks#show", as: :task
 
   # EDIT (1) -- GET form to edit task - http://localhost:3000/tasks/:id/edit
-  get "tasks/:id/edit", to: "tasks#edit"
+  get "tasks/:id/edit", to: "tasks#edit", as: :edit_task
 
   # EDIT (2) -- PATCH form to update task instance - http://localhost:3000/tasks/:id
   patch "tasks/:id", to: "tasks#update"
 
   # REMOVE -- DELETE task w/id to destroy task instance - http://localhost:3000/restaurants/1
-  # Not their own view, delete option in task instance page 
+  # Not their own view, delete option in task instance page
   delete "tasks/:id", to: "tasks#destroy"
 
 end
