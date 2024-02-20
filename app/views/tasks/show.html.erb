@@ -1,0 +1,7 @@
+<h1>Details of your task</h1>
+
+<h2>Task: <%= @task.title %></h2>
+<ul>
+  <li>Details: <%= @task.details %></li>
+  <li>Completion status: <%= @task.completed? ? "✅" : "⬜️" %></li>
+</ul>
