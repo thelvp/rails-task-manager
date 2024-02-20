@@ -1,17 +1,19 @@
-<h1>Details of your task</h1>
+<div class="task">
+  <h1>Details of your task</h1>
 
-<h2 class="mt-4"><%= @task.title %></h2>
-<ul class="list-group">
-  <li class="list-group-item width">Details: <%= @task.details %></li>
-  <li class="list-group-item">Completion status: <%= @task.completed? ? "✅" : "⬜️" %></li>
-</ul>
+  <h2 class="mt-4"><%= @task.title %></h2>
+  <ul class="list-group">
+    <li class="list-group-item width">Details: <%= @task.details %></li>
+    <li class="list-group-item">Completion status: <%= @task.completed? ? "✅" : "⬜️" %></li>
+  </ul>
 
-<div class="btn mt-3">
-  <%= link_to "📝 Edit", edit_task_path(@task) %></li>
-</div>
+  <div class="btn mt-3">
+    <%= link_to "📝 Edit", edit_task_path(@task) %></li>
+  </div>
 
-<div class="btn mt-3">
-  <%= link_to "🗑️ Delete",
-    task_path(@task),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <div class="btn mt-3">
+    <%= link_to "🗑️ Delete",
+      task_path(@task),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  </div>
 </div>

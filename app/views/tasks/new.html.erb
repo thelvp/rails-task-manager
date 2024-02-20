@@ -1,4 +1,7 @@
-<h1>Add a task</h1>
-
-<%# get info to make one task - @task variable set up in controller %>
-<%= render "form", task: @task %>
+<div class="add">
+  <h1 >Add a task</h1>
+  <%# get info to make one task - @task variable set up in controller %>
+  <div class="mt-4">
+    <%= render "form", task: @task %>
+  </div>
+</div>
